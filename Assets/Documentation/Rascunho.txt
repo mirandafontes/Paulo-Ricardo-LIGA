@@ -1,0 +1,24 @@
+﻿Dinossaur Survive:
+
+Um dia você acabou sendo isekaizado e renasceu como um dinossauro
+justamente no dia em que os asteroídes resolveram atingir a terra
+enquanto cogumelos tentam te atacar.
+Sobreviva a maior quantidade de tempo possivel (eliminando a maior
+quantidade de cogumelos).
+
+Risk of Rain Like
+Sobreviver as Waves de cogumelos por maior tempo possivel (Animação de Spawn)
+Pedras caindo do ceu depois de um tempo (rip dinossauros)
+Cenário fixo (Onde o dinossauro pode se mover)
+Utilizar Cinemachine para movimentação da câmera
+
+TODO:
+Utilizar Unity Events para permitir maior permissibilidade
+CONSTRUIR PRIMEIRO O GAMECORE!!!!
+UNITY ADS (ADS APENAS NA LOADING SCENE) E ANALYTICS
+FORNECER MODEL PARA ANALYTICS (Tempo de Jogo, Cogumelos por tipo mortos, Asteroides desviados)
+Object Pool (Prefabs kappa)
+Movimentação (Interface com binding à metodos) baseada em TemplateMethod e Decorator
+
+Definir interface para LevelLoader
+
