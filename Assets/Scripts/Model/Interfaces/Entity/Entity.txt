@@ -1,0 +1,15 @@
+As classes que implementam as interfaces do Entities são a exemplo:
+- O player
+- Inimigos
+
+A interface Entity aqui define os comportamentos apenas.
+Tanto o Player quanto o Inimigo se movem (IMoveableEntity)
+ou realizam alguma ação (IActableEntity)
+
+Vulgo, objetos que se movem e realizam alguma ação no jogo.
+Eles são objetos que unem a ação com o command ao MonoBehaviour
+
+Eles realizam um conjunto de movimentos e ações específicos.
+A intenção de separar as classes assim é utilizar (ou tentar) o mesmo
+script do Player nos Inimigos e, utilizando os Commands (ICommandAction)
+(uma lista desses) criar uma simples IA.
