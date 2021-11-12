@@ -1,4 +1,5 @@
 ﻿Dinossaur Survive:
+*Isso com certeza vai mudar kappa*
 
 Um dia você acabou sendo isekaizado e renasceu como um dinossauro
 justamente no dia em que os asteroídes resolveram atingir a terra
@@ -18,7 +19,12 @@ CONSTRUIR PRIMEIRO O GAMECORE!!!!
 UNITY ADS (ADS APENAS NA LOADING SCENE) E ANALYTICS
 FORNECER MODEL PARA ANALYTICS (Tempo de Jogo, Cogumelos por tipo mortos, Asteroides desviados)
 Object Pool (Prefabs kappa)
-Movimentação (Interface com binding à metodos) baseada em TemplateMethod e Decorator
+Movimentação (Interface com binding à metodos) baseada em TemplateMethod e Command*
 
 Definir interface para LevelLoader
 
+
+Command
+Criar uma interface para movimentação
+Cada movimentação implementaria essa interface (correr direita, esquerda, pular, atacar)
+Isso facilitaria criar a IA
