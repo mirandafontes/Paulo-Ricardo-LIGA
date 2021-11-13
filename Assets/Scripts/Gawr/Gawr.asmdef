@@ -1,0 +1,16 @@
+{
+    "name": "Gawr",
+    "rootNamespace": "Gawr",
+    "references": [
+        "GUID:e064215d690caa54793a5c21ed3b01b0"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

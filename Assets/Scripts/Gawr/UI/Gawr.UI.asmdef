@@ -1,0 +1,16 @@
+{
+    "name": "Gawr.UI",
+    "rootNamespace": "",
+    "references": [
+        "GUID:ce4dbdab2cdd9704daa776e0cd8aa29f"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

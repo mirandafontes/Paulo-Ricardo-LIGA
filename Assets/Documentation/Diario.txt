@@ -26,7 +26,7 @@ quanto para os cogumelos.
 Com o Command Pattern, seria muito fácil criar e definir
 os comportamentos da IA. Para cada estado, haveria apenas
 uma lista de commands a serem seguidos e realizados, o que
-viria a facilitar adicionar comportamentos novos (afinal, é um command)
+viria a facilitar para adicionar comportamentos novos (afinal, é um command)
 e criar estados novos (por que seria um simples estado com uma lista simples).
 
 O Invoker do command seria basicamente a identificação de input.
@@ -34,7 +34,7 @@ O Invoker do command seria basicamente a identificação de input.
 O Unity Analytics seria a quantidade de meteoros esquivados
 e o tempo que ficou vivo.
 
-Entretanto, pensei que acabaria tomando tempo
+Entretanto, pensei que acabaria levando muito tempo
 e pela disposição dos assets 
 (esperava algo 3D ou um tileset na pegada de um RPG Maker)
 preferi optar por algo mais simples.
@@ -108,3 +108,17 @@ o principio de responsabilidade unica da classe ao resolver dois problemas
 (o da instância unica + o especifico da classe). Cenas dos próximos capitulos.
 
 Percebi agora que os sprites estavam com o corte errado no Sprite Editor. Oh god.
+
+O Invoker (ControllerHandler) está pronto, assim como a correção dos sprites.
+Começar a trabalhar no LevelLoader agora (15:00).
+
+Adicionei à interface do ILevelLoader um getter para o progresso do Loading.
+
+Pensei em criar uma interface para tirar à referência direta ao LevelLoader (quando aplicar
+o singleton, ao se utilizar o Instance). Mas acabei deixando no próprio LevelLoader ;3;
+
+O LevelLoader provavelmente será a classe menos elaborada dos scripts.
+
+Após uma pausa de 2h, LevelLoader terminado (20:00)
+
+Verificar como implementar uma AD Básica depois de uma pausa.
