@@ -75,7 +75,7 @@ Fiz implementações de modelos/interfaces básicas hoje.
 
 12/11/2021
 
-Hoje (noite) pretendo implementar o Handler e o Invoker para o Player
+Hoje (noite) pretendo implementar o Receiver* e o Invoker para o Player
 e assim como construir as cenas básicas para implementar
 e testar o LevelLoader.
 
@@ -91,3 +91,20 @@ dos cogumelos com um unico script.
 
 Queria ter dividido os commits corretamente (ao invés de um commit gigante por que né)
 mas devido a refatoração das pastas e "rushando", acabei deixando acumular.
+
+13/11/2021
+
+Hoje:
+    - Terminar o PlayerEntity, junto com um Invoker para PC
+    - Começar o LevelLoader
+
+Estou atualmente em duvidas se deveria criar um Main.cs (ou algo similar)
+para inicializar os commands e afins (separando a logica de criação, 
+como um "factory pattern") ou em um monobehaviour simples.
+Ficarei com o monobehaviour por enquanto para evitar "over-enginerizar" o código.
+
+Estive pensando se devo realizar o LevelLoader como singleton. Ele quebra
+o principio de responsabilidade unica da classe ao resolver dois problemas
+(o da instância unica + o especifico da classe). Cenas dos próximos capitulos.
+
+Percebi agora que os sprites estavam com o corte errado no Sprite Editor. Oh god.

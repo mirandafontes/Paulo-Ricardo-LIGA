@@ -8,7 +8,7 @@ namespace Gawr.Misc
         [Header("Target")]
         [SerializeField] private Collider2D _initialCollider;
         [SerializeField] private Collider2D _otherCollider;
-        
+
         [Header("Callback")]
         [SerializeField] private UnityEvent _onCollisionEnter;
         [SerializeField] private UnityEvent _onCollisionStay;
@@ -46,7 +46,12 @@ namespace Gawr.Misc
 
         private bool CheckEquality(Collision2D collision)
         {
+            //Com certeza há uma forma melhor de escrever isso
             if (collision.collider.Equals(_initialCollider) && collision.otherCollider.Equals(_otherCollider))
+            {
+                return true;
+            }
+            else if (collision.collider.Equals(_otherCollider) && collision.otherCollider.Equals(_initialCollider))
             {
                 return true;
             }

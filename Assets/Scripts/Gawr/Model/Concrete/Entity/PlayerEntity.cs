@@ -17,6 +17,7 @@ namespace Gawr.Model.Concrete.Entity
         [Header("Data")]
         [SerializeField] private float _runSpeed;
         [SerializeField] private float _jumpForce;
+        [SerializeField] private float _movementSmoothing = 0.05f;
 
         [Header("Components")]
         [SerializeField] private Animator _animator;
@@ -25,10 +26,13 @@ namespace Gawr.Model.Concrete.Entity
         [SerializeField] private SpriteRenderer _spriteRenderer;
 
         private float _horizontalMove;
+        private Vector2 _velocityVector;
 
         private void Start()
         {
             _horizontalMove = 0;
+            _velocityVector = Vector2.zero;
+
             Down();
         }
 
@@ -52,17 +56,25 @@ namespace Gawr.Model.Concrete.Entity
         {
             Flip(true);
             _animator.SetFloat(Words.AnimatorSpeedHash, Mathf.Abs(_horizontalMove));
+            ApplyVelocityRigidBody(_horizontalMove);
         }
 
         public void Right()
         {
             Flip(false);
             _animator.SetFloat(Words.AnimatorSpeedHash, Mathf.Abs(_horizontalMove));
+            ApplyVelocityRigidBody(_horizontalMove);
         }
 
         private void Flip(bool flipX)
         {
             _spriteRenderer.flipX = flipX;
+        }
+
+        private void ApplyVelocityRigidBody(float horizontalMove)
+        {
+            Vector2 targetVelocity = new Vector2(horizontalMove * 10f, _rigidbody.velocity.y);
+            _rigidbody.velocity = Vector2.SmoothDamp(_rigidbody.velocity, targetVelocity, ref _velocityVector, _movementSmoothing);
         }
 
         /// <summary>
@@ -72,6 +84,12 @@ namespace Gawr.Model.Concrete.Entity
         public void Velocity(float x)
         {
             _horizontalMove = x * _runSpeed;
+        }
+
+        public void Idle()
+        {
+            ApplyVelocityRigidBody(0);
+            _animator.SetFloat(Words.AnimatorSpeedHash, 0);
         }
     }
 }

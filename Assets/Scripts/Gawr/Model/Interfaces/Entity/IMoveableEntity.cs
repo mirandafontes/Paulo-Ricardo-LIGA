@@ -11,5 +11,6 @@ namespace Gawr.Model.Interface.Entity
         void Left();
         void Right();
         void Velocity(float x);
+        void Idle();
     }
 }
