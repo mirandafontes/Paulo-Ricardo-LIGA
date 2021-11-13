@@ -1,0 +1,93 @@
+Paulo Ricardo Miranda Fontes
+Nome do jogo: Gawr
+
+Resolvi utilizar esse txt como um diário do desenvolvimento para
+o game. A priori, eu tive uma ideia mais complexa mas acabei
+deixando de lado pela simplicidade. Eu espero atualizar isso ao final
+e inicio de cada dia de desenvolvimento.
+
+11/11/2021
+
+A priori, eu tive uma ideia de criar um jogo
+na qual o dinossauro (player) teria que ficar
+vivo pela maior quantidade de tempo, enquanto
+corria de cogumelos (IA) e escapava dos meteoros.
+
+Evito também utilizar qualquer framework
+ou pacote que possa adiantar minha vida,
+preferi codar tudo que fosse possível
+para o teste.
+
+Eu iria utilizar o Command Pattern para dividir
+as interações dele (andar para a esquerda, direita e etc)
+e utilizar o mesmo script de movimentação tanto para o player
+quanto para os cogumelos.
+
+Com o Command Pattern, seria muito fácil criar e definir
+os comportamentos da IA. Para cada estado, haveria apenas
+uma lista de commands a serem seguidos e realizados, o que
+viria a facilitar adicionar comportamentos novos (afinal, é um command)
+e criar estados novos (por que seria um simples estado com uma lista simples).
+
+O Invoker do command seria basicamente a identificação de input.
+
+O Unity Analytics seria a quantidade de meteoros esquivados
+e o tempo que ficou vivo.
+
+Entretanto, pensei que acabaria tomando tempo
+e pela disposição dos assets 
+(esperava algo 3D ou um tileset na pegada de um RPG Maker)
+preferi optar por algo mais simples.
+
+
+A intenção de definir a interface do LevelLoader é para
+garantir que ocorra a divisão correta entre a lógica
+de loading e a UI do Unity. (Uma vez que não há como
+gerar referências diretas para a interface usando
+a serialização do Unity no inspector).
+
+Além disso, colocarei o LevelLoader como Singleton
+(para evitar que existam multiplas instancias dele
+carregando coisas diferentes.
+
+Seria uma ideia legal carregar
+uma cena principal vazia, uma cena de UI/Canvas apenas de maneira
+aditiva e outra cena contendo o gameplay, mas fora de questão
+para cá rip)
+
+O fluxo do game seria o seguinte:
+- MainMenu
+- Cena intermediare *
+- Cena 1
+- Cena 2
+- Etc
+
+* A cena intermediare seria a responsável por carregar demais cenas do jogo
+de maneira Async e, enquanto carrega, exibir uma ADS com o Unity ADS.
+
+Outra coisa que eu gostaria de implementar é o uso de testes unitários
+tanto do Editor quanto do Runtime, utilizando o Unity Test Runner (mas
+não sei se irei realizar devido a tempo + não sou acostumado a trabalhar
+utilizando Test Development Driven).
+
+Fiz implementações de modelos/interfaces básicas hoje.
+
+
+12/11/2021
+
+Hoje (noite) pretendo implementar o Handler e o Invoker para o Player
+e assim como construir as cenas básicas para implementar
+e testar o LevelLoader.
+
+Acabei passando boa parte na noite construindo o PlayerEntity (Receiver)
+para a movimentação, assim como refatorando as pastas para incluir
+o nome do game e setando o animator.
+
+Aproveitei para criar (tentar) um identificador de colisões genérico
+utilizando UnityEvent. Isso me permetiria chamar a função para
+setar "false" no jump do animator com o ground check sem necessidade
+de utilizar um FixedUpdate/Update assim como tratar a coleta
+dos cogumelos com um unico script.
+
+Queria ter dividido os commits corretamente (ao invés de um commit gigante por que né)
+mas devido a refatoração das pastas e "rushando", acabei deixando acumular.
