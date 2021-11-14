@@ -122,3 +122,18 @@ O LevelLoader provavelmente será a classe menos elaborada dos scripts.
 Após uma pausa de 2h, LevelLoader terminado (20:00)
 
 Verificar como implementar uma AD Básica depois de uma pausa.
+
+Acabei parando para começar a implementar um primeiro MainMenu (UI) (20:30).
+Importei Assets gratuitos para a UI e uma fonte.
+
+Pensei em criar scripts para animar os botões (método geralmente preferível para
+poder expandir corretamente as animações da UI (LeanTween a exemplo), além de que, o animator no estado
+"Idle" suja o canvas a todo frame, fazendo o Unity o redesenha-lo à todo frame).
+
+MAS
+como o canvas atual é composto de muito poucos elementos,
+
+Tentei criar uma animação curta e genérica utilizando AnimatorController,
+AnimatorController Override e transições. Acabei desistindo pois exigiria
+um pouco mais de tempo para deixar algo agradável aos olhos e optei por
+utilizar um simples CanvasGroup controlado pelo botão. (23:00)
