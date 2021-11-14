@@ -137,3 +137,17 @@ Tentei criar uma animação curta e genérica utilizando AnimatorController,
 AnimatorController Override e transições. Acabei desistindo pois exigiria
 um pouco mais de tempo para deixar algo agradável aos olhos e optei por
 utilizar um simples CanvasGroup controlado pelo botão. (23:00)
+
+14/11/2021
+
+Acabei desistindo da ideia de possuir meteoros e afins
+durante o jogo. Acabou ficando:
+- 2 tipos de cogumelos (bom e ruim)
+- bom = + pontos
+- ruim = - pontos
+- todos os cogumelos bons antes do tempo
+- não pode ter pontuação negativa
+
+Tenho um simulado do JLPT N4 pela tarde, só
+poderei codar algo depois das 17:00 quando voltar
+para casa (rip) (12:00).
