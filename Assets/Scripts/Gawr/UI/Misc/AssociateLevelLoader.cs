@@ -33,5 +33,31 @@ namespace Gawr.UI.Misc
         {
             ((LevelLoader)_levelLoader)?.ActivateNextLevel();
         }
+
+        public float Progress()
+        {
+            //Evitar uso de nullable para tipos simples
+            if (_levelLoader != null)
+            {
+                return _levelLoader.Progress;
+            }
+            else
+            {
+                return -1;
+            }
+        }
+
+        public bool IsLoading()
+        {
+            //Evitar uso de nullable para tipos simples
+            if (_levelLoader != null)
+            {
+                return _levelLoader.Loading;
+            }
+            else
+            {
+                return false;
+            }
+        }
     }
 }

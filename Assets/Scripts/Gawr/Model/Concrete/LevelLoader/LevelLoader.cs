@@ -19,7 +19,14 @@ namespace Gawr.Model.Concrete.LevelLoader
         {
             get
             {
-                return _progress;
+                if (_loading)
+                {
+                    return _progress;
+                }
+                else
+                {
+                    return 0;
+                }
             }
         }
         private float _progress;
@@ -61,8 +68,8 @@ namespace Gawr.Model.Concrete.LevelLoader
         {
             if (_loading)
             {
-                _instance._asyncSceneOperation.allowSceneActivation = true;
                 _loading = false;
+                _instance._asyncSceneOperation.allowSceneActivation = true;
             }
         }
 

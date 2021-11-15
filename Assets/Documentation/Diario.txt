@@ -144,10 +144,27 @@ Acabei desistindo da ideia de possuir meteoros e afins
 durante o jogo. Acabou ficando:
 - 2 tipos de cogumelos (bom e ruim)
 - bom = + pontos
-- ruim = - pontos
-- todos os cogumelos bons antes do tempo
-- não pode ter pontuação negativa
+- ruim = morte
+- todos os cogumelos bons antes do tempo (ou pontuação)
 
 Tenho um simulado do JLPT N4 pela tarde, só
 poderei codar algo depois das 17:00 quando voltar
 para casa (rip) (12:00).
+
+Alguma das muitas coisas que fiz correndo entre 18:00 e 23:30
+Adição da Intermediare Scene
+Adição do LevelLoaderProgressWrite
+Adição da primeira gameplay Scene
+Import do Cinemachine
+Remoção de pacotes não utilizados
+Remoção do Rascunho
+Correção no import de arquivos para o tilemap
+Adição da Tile palette para objetos
+Refatoração no LevelLoader
+
+Adição de modelos para as regras do jogo e dados:
+-Scene Data (Scriptable para controle da cena de gameplay)
+-Player Data (Container para dados do gameplay do jogador)
+-IGameConditioner (Interface para condições de Win/Lose do jogo)
+-ITimer (Interface para contagem do tempo)
+e assim como classes concretas para essas interfaces
