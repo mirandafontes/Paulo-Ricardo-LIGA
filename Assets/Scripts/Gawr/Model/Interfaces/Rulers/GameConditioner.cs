@@ -38,5 +38,12 @@ namespace Gawr.Model.Interface.Rulers
             return LoseCondition();
         }
         public abstract bool LoseCondition();
+
+        [ContextMenu("GameOver Check")]
+        public void CheckGameOver()
+        {
+            Win();
+            Lose();
+        }
     }
 }

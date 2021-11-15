@@ -9,5 +9,9 @@ namespace Gawr.Model.Interface.Rulers
         bool WinCondition();
         void Lose();
         bool LoseCondition();
+        /// <summary>
+        /// Chama tanto Win quanto Lose
+        /// </summary>
+        void CheckGameOver();
     }
 }

@@ -40,15 +40,28 @@ namespace Gawr.Invoker
             _horizontalAxisRaw = 0;
         }
 
+#if UNITY_EDITOR
         private void Update()
         {
             _horizontalAxisRaw = Input.GetAxisRaw("Horizontal");
-            
+
             if (Input.GetButtonDown("Jump"))
             {
                 _shouldJump = true;
             }
         }
+#endif
+
+        public void SetHorizontalAxis(float horizontalAxisRaw)
+        {
+            _horizontalAxisRaw = Mathf.Clamp(horizontalAxisRaw, -1f, +1f);
+        }
+
+        public void Jump()
+        {
+            _shouldJump = true;
+        }
+
 
         //Como estamos utilizando RigidBody
         private void FixedUpdate()

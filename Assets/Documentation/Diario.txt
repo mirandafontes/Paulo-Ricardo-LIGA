@@ -168,3 +168,9 @@ Adição de modelos para as regras do jogo e dados:
 -IGameConditioner (Interface para condições de Win/Lose do jogo)
 -ITimer (Interface para contagem do tempo)
 e assim como classes concretas para essas interfaces
+
+15/11/2021
+
+Hoje (11:00):
+- Implementar totalmente a primeira fase do game (OKAY - 16:00)
+- Implementar o Unity Analytics

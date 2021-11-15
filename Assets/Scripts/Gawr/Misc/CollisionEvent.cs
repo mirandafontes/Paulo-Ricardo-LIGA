@@ -14,6 +14,14 @@ namespace Gawr.Misc
         [SerializeField] private UnityEvent _onCollisionStay;
         [SerializeField] private UnityEvent _onCollisionExit;
 
+        private void Awake()
+        {
+            if (_initialCollider == null || _otherCollider == null)
+            {
+                Debug.LogError($"Initial collider : {_initialCollider}. Other collider {_otherCollider}");
+            }
+        }
+
         public void OnCollisionEnter2D(Collision2D collision)
         {
             if (!CheckEquality(collision))

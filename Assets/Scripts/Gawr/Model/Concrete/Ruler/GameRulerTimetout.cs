@@ -8,7 +8,7 @@ namespace Gawr.Model.Ruler
     {
         [SerializeField] private GameObject _itimer;
         [SerializeField] private SceneData _sceneData;
-        [SerializeField] private PlayerData _playerData;
+        [SerializeField] private PlayerContainerData _playerData;
         private ITimer _timer;
 
         private void Awake()
@@ -30,12 +30,14 @@ namespace Gawr.Model.Ruler
         }
         public override bool LoseCondition()
         {
-            if (_timer.CurrentTime() < _sceneData.TotalTime)
+            if (_timer.CurrentTime() >= _sceneData.TotalTime && _playerData.CurrentPoints < _sceneData.PointsToWin)
             {
-                if (_playerData.CurrentPoints >= _sceneData.PointsToWin)
-                {
-                    return true;
-                }
+                return true;
+            }
+
+            if (!_playerData.IsPlayerAlive)
+            {
+                return true;
             }
 
             return false;

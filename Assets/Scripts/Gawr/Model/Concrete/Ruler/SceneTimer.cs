@@ -10,6 +10,7 @@ namespace Gawr.Model.Ruler
     {
         [SerializeField] private SceneData _sceneData;
         [SerializeField] private UnityEvent _timeoutEvent;
+        [SerializeField] [Tooltip("Evento para cada contagem no timer")] private UnityEvent _cicleEvent;
         private int _currentTime;
         private bool _resumeCount;
         private bool _alreadyCounting;
@@ -58,7 +59,11 @@ namespace Gawr.Model.Ruler
                 {
                     _currentTime++;
                 }
+
+                _cicleEvent?.Invoke();
             }
+
+            TimeOut();
 
             yield return null;
         }

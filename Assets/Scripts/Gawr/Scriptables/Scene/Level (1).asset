@@ -16,4 +16,4 @@ MonoBehaviour:
   GoodMushroomsSpawn: 5
   BadMushroomsSpawn: 3
   PointsPerGoodMushroom: 10
-  PointsToWin: 40
+  PointsToWin: 50

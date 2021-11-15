@@ -27,11 +27,13 @@ namespace Gawr.Model.Concrete.Entity
 
         private float _horizontalMove;
         private Vector2 _velocityVector;
+        private Vector2 _targetVelocity;
 
         private void Start()
         {
             _horizontalMove = 0;
             _velocityVector = Vector2.zero;
+            _targetVelocity = Vector2.zero;
 
             Down();
         }
@@ -73,8 +75,9 @@ namespace Gawr.Model.Concrete.Entity
 
         private void ApplyVelocityRigidBody(float horizontalMove)
         {
-            Vector2 targetVelocity = new Vector2(horizontalMove * 10f, _rigidbody.velocity.y);
-            _rigidbody.velocity = Vector2.SmoothDamp(_rigidbody.velocity, targetVelocity, ref _velocityVector, _movementSmoothing);
+            _targetVelocity.x = horizontalMove * 10f;
+            _targetVelocity.y = _rigidbody.velocity.y;
+            _rigidbody.velocity = Vector2.SmoothDamp(_rigidbody.velocity, _targetVelocity, ref _velocityVector, _movementSmoothing);
         }
 
         /// <summary>
