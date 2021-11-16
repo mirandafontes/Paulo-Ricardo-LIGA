@@ -12,5 +12,7 @@ namespace Gawr.Model.Interface.Entity
         void Right();
         void Velocity(float x);
         void Idle();
+        ///TODO: Refatorar e colocar em outra interface. Não é adequado ficar no IMoveable
+        void Die();
     }
 }

@@ -173,4 +173,6 @@ e assim como classes concretas para essas interfaces
 
 Hoje (11:00):
 - Implementar totalmente a primeira fase do game (OKAY - 16:00)
-- Implementar o Unity Analytics
+- Implementar o Unity Analytics (OKAY - Após uma pausa, 18:00)
+- Implementar Unity ADS (OKAY - 19:00)
+- Game completo e testado (com alguns adendos. Sem audio ainda - 21:00)

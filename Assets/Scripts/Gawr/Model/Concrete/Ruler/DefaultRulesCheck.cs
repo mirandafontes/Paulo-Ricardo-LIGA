@@ -4,7 +4,10 @@ using UnityEngine;
 
 namespace Gawr.Model.Ruler
 {
-    public class GameRulerTimetout : GameRuler
+    /// <summary>
+    /// Regras padrão: Obter acima de tantos pontos, ficar vivo e o tempo não acabar antes.
+    /// </summary>
+    public class DefaultRulesCheck : GameRuler
     {
         [SerializeField] private GameObject _itimer;
         [SerializeField] private SceneData _sceneData;
@@ -16,6 +19,13 @@ namespace Gawr.Model.Ruler
             _timer = _itimer.GetComponent<ITimer>();
         }
 
+        //Essas outras condições (pontos e morreu) poderiam ser
+        //outros scripts menores do GameRuler.
+        //Assim, cada scene seria formado por uma lista
+        //de condições de jogo, possibilitando
+        //condições mais complexas de uma maneira simples.
+        //Entretanto, nesse ponto, não há complexidade suficiente
+        //para essa separação de classes.
         public override bool WinCondition()
         {
             if (_timer.CurrentTime() < _sceneData.TotalTime)

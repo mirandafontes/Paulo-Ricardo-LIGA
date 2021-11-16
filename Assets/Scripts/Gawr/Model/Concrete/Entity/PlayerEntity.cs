@@ -67,6 +67,12 @@ namespace Gawr.Model.Concrete.Entity
             _animator.SetFloat(Words.AnimatorSpeedHash, Mathf.Abs(_horizontalMove));
             ApplyVelocityRigidBody(_horizontalMove);
         }
+        
+        ///TODO: Refatorar e colocar em outra interface. Não é adequado ficar no IMoveable
+        public void Die()
+        {
+            _animator.SetTrigger(Words.AnimatorDeadHash);
+        }
 
         private void Flip(bool flipX)
         {

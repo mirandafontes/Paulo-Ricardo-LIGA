@@ -9,7 +9,9 @@ namespace Gawr.Misc
     {
         public static readonly string AnimatorSpeedWord = "Speed";
         public static readonly int AnimatorSpeedHash = Animator.StringToHash(AnimatorSpeedWord);
-        public static readonly string AnimatorIsJumpingWord= "IsJumping";
+        public static readonly string AnimatorIsJumpingWord = "IsJumping";
         public static readonly int AnimatorIsJumpingHash = Animator.StringToHash(AnimatorIsJumpingWord);
+        public static readonly string AnimatorDeadWord = "Dead";
+        public static readonly int AnimatorDeadHash = Animator.StringToHash(AnimatorDeadWord);
     }
 }

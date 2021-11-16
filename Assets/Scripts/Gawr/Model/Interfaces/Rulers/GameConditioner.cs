@@ -25,6 +25,11 @@ namespace Gawr.Model.Interface.Rulers
         {
             return WinCondition();
         }
+        
+        /// <summary>
+        /// Atua como método variável do template method.
+        /// Implementado na sub-classe.
+        /// </summary>
         public abstract bool WinCondition();
         public void Lose()
         {
@@ -37,6 +42,11 @@ namespace Gawr.Model.Interface.Rulers
         {
             return LoseCondition();
         }
+
+        /// <summary>
+        /// Atua como método variável do template method.
+        /// Implementado na sub-classe.
+        /// </summary>
         public abstract bool LoseCondition();
 
         [ContextMenu("GameOver Check")]
